@@ -153,4 +153,21 @@ public class DoublyLinkedList {
         length--;
         return temp;
     }
+
+    public void reverse() {
+
+        if (length == 0) return;
+        Node temp = null;
+        Node current = head;
+        while (current != null) {
+            temp = current.prev;
+            current.prev = current.next;
+            current.next = temp;
+            current = current.prev;
+        }
+        tail = head;
+        if (temp != null) {
+            head = temp.prev;
+        }
+    }
 }

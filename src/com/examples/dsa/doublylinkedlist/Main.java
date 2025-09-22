@@ -47,5 +47,10 @@ public class Main {
         myDLL.append(8);
         myDLL.append(5);
         myDLL.printList();
+        System.out.println("=============");
+        myDLL.reverse();
+        myDLL.printList();
+        myDLL.getTail();
+        myDLL.getHead();
     }
 }
